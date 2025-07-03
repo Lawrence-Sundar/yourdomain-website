@@ -15,12 +15,13 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #2d3748;
+            color: #E2E8F0;
+            background-color: #1A202C;
             overflow-x: hidden;
         }
 
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
             min-height: 100vh;
             position: relative;
         }
@@ -81,16 +82,26 @@
         }
 
         .nav-links a {
-            color: white;
+            color: #F7FAFC !important;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
             padding: 8px 16px;
             border-radius: 20px;
+            border: none;
+            outline: none;
         }
 
         .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(245, 101, 0, 0.2);
+            color: #f56500 !important;
+            border: none;
+            outline: none;
+        }
+
+        .nav-links a:focus {
+            outline: none;
+            border: none;
         }
 
         .social-links {
@@ -99,13 +110,21 @@
         }
 
         .social-links a {
-            color: white;
+            color: #F7FAFC !important;
             font-size: 1.2rem;
             transition: opacity 0.3s ease;
+            border: none;
+            outline: none;
         }
 
         .social-links a:hover {
             opacity: 0.7;
+            color: #f56500 !important;
+        }
+
+        .social-links a:focus {
+            outline: none;
+            border: none;
         }
 
         /* Mobile menu */
@@ -113,14 +132,20 @@
             display: none;
             background: none;
             border: none;
-            color: white;
+            color: #F7FAFC;
             font-size: 1.5rem;
             cursor: pointer;
+            outline: none;
         }
 
-        /* Hero Section - adjusted for fixed nav */
+        .mobile-menu-btn:focus {
+            outline: none;
+            border: none;
+        }
+
+        /* Hero Section - adjusted for fixed nav and NO GAP */
         .hero {
-            padding: 140px 0 120px;
+            padding: 180px 0 0;
             text-align: center;
             color: white;
             position: relative;
@@ -203,9 +228,11 @@
             justify-content: center;
             align-items: center;
             gap: 30px;
-            margin-top: 30px;
+            margin-top: 20px;
+            margin-bottom: -20px;
             opacity: 0;
             animation: fadeInUp 1s ease 0.8s forwards;
+            padding-bottom: 0;
         }
 
         .trust-item {
@@ -248,11 +275,11 @@
             animation-delay: 4s;
         }
 
-        /* Main Content */
+        /* Main Content - NO GAP */
         .main-content {
-            background: white;
+            background: #1A202C;
             border-radius: 30px 30px 0 0;
-            margin-top: -50px;
+            margin-top: -100px;
             position: relative;
             z-index: 10;
             padding: 80px 0;
@@ -262,18 +289,26 @@
             padding: 60px 0;
         }
 
+        .section:nth-child(even) {
+            background: #1A202C;
+        }
+
+        .section:nth-child(odd) {
+            background: #1A202C;
+        }
+
         .section h2 {
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 20px;
-            color: #2d3748;
+            color: #F7FAFC;
         }
 
         .section p {
             text-align: center;
             font-size: 1.1rem;
-            color: #4a5568;
+            color: #CBD5E0;
             max-width: 700px;
             margin: 0 auto 50px;
         }
@@ -301,7 +336,7 @@
         }
 
         .pain-point {
-            background: #fef5e7;
+            background: #4A5568;
             padding: 30px;
             border-radius: 15px;
             text-align: center;
@@ -311,16 +346,17 @@
 
         .pain-point:hover {
             transform: translateY(-5px);
+            background: #2D3748;
         }
 
         .pain-point h4 {
             font-size: 1.3rem;
             margin-bottom: 10px;
-            color: #2d3748;
+            color: #F7FAFC;
         }
 
         .pain-point p {
-            color: #4a5568;
+            color: #CBD5E0;
             text-align: left;
             margin: 0;
         }
@@ -334,7 +370,7 @@
         }
 
         .feature-card {
-            background: #f7fafc;
+            background: #4A5568;
             padding: 40px 30px;
             border-radius: 20px;
             text-align: center;
@@ -344,8 +380,9 @@
 
         .feature-card:hover {
             transform: translateY(-10px);
-            border-color: #667eea;
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.1);
+            border-color: #f56500;
+            box-shadow: 0 20px 40px rgba(245, 101, 0, 0.2);
+            background: #2D3748;
         }
 
         .feature-icon {
@@ -358,11 +395,11 @@
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 15px;
-            color: #2d3748;
+            color: #F7FAFC;
         }
 
         .feature-card p {
-            color: #4a5568;
+            color: #CBD5E0;
             text-align: left;
         }
 
@@ -375,8 +412,8 @@
         }
 
         .pricing-card {
-            background: white;
-            border: 2px solid #e2e8f0;
+            background: #4A5568;
+            border: 2px solid #2D3748;
             border-radius: 20px;
             padding: 40px 30px;
             text-align: center;
@@ -385,14 +422,15 @@
         }
 
         .pricing-card:hover {
-            border-color: #667eea;
+            border-color: #f56500;
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(245, 101, 0, 0.2);
         }
 
         .pricing-card.featured {
             border-color: #f56500;
             transform: scale(1.05);
+            background: #2D3748;
         }
 
         .pricing-card.featured::before {
@@ -409,16 +447,20 @@
             font-weight: 600;
         }
 
+        .pricing-card h3 {
+            color: #F7FAFC;
+        }
+
         .price {
             font-size: 3rem;
             font-weight: 700;
-            color: #2d3748;
+            color: #F7FAFC;
             margin: 20px 0;
         }
 
         .price span {
             font-size: 1rem;
-            color: #4a5568;
+            color: #CBD5E0;
         }
 
         .pricing-features {
@@ -428,7 +470,7 @@
 
         .pricing-features li {
             padding: 8px 0;
-            color: #4a5568;
+            color: #CBD5E0;
         }
 
         .pricing-features li::before {
@@ -451,16 +493,19 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            background: #f7fafc;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
             padding: 10px 15px;
             border-radius: 10px;
             font-size: 0.9rem;
-            color: #4a5568;
+            color: #CBD5E0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* About Section */
         .about {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: rgba(255, 255, 255, 0.15) !important;
+            backdrop-filter: blur(10px);
             padding: 80px 40px;
             border-radius: 30px;
             margin: 80px 0;
@@ -488,16 +533,20 @@
             padding: 30px;
             margin-top: 30px;
             backdrop-filter: blur(10px);
+            text-align: center !important;
         }
 
         .contact-info h4 {
             color: white;
             margin-bottom: 15px;
+            text-align: center !important;
         }
 
         .contact-info p {
             color: rgba(255, 255, 255, 0.9);
-            margin: 5px 0;
+            margin: 5px auto !important;
+            text-align: center !important;
+            max-width: 100% !important;
         }
 
         /* Enhanced FAQ Section */
@@ -540,7 +589,7 @@
 
         /* Real Testimonials */
         .testimonials {
-            background: #f7fafc;
+            background: #1A202C !important;
             padding: 80px 40px;
             border-radius: 30px;
             margin: 80px 0;
@@ -747,7 +796,7 @@
             }
 
             .hero {
-                padding: 120px 0 80px;
+                padding: 120px 0 0;
             }
 
             .cta-container {
@@ -785,10 +834,6 @@
             nav {
                 padding: 15px 0;
             }
-
-            .hero {
-                padding: 100px 0 60px;
-            }
         }
     </style>
 </head>
@@ -800,7 +845,7 @@
         <div class="floating-shape shape-3"></div>
 
         <!-- Sticky Navigation -->
-        <nav id="navbar">
+        <nav id="navbar" style="background: #1A202C !important; border: none; outline: none;">
             <div class="container">
                 <div class="nav-content">
                     <a href="#" class="logo">
@@ -853,12 +898,12 @@
             <!-- Tally Quiz Integration -->
             <section id="quiz" class="quiz-preview">
                 <div style="text-align: center; padding: 40px 0;">
-                    <h3 style="color: #2d3748; font-size: 2rem; margin-bottom: 20px;">🧠 Take Your ADHD Focus Style Quiz</h3>
-                    <p style="color: #4a5568; font-size: 1.1rem; margin-bottom: 30px;">Discover your personalized toolkit in just 60 seconds</p>
+                    <h3 style="color: #F7FAFC; font-size: 2rem; margin-bottom: 20px; font-weight: 700;">🧠 Take Your ADHD Focus Style Quiz</h3>
+                    <p style="color: #E2E8F0; font-size: 1.2rem; margin-bottom: 30px; font-weight: 500;">Discover your personalized toolkit in just 60 seconds</p>
                     <a href="https://tally.so/r/mKNAP7" target="_blank" class="cta-button cta-primary" style="display: inline-block; padding: 20px 40px; background: #f56500; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(245, 101, 0, 0.3); transition: all 0.3s ease;">
                         Start Your Free Quiz →
                     </a>
-                    <p style="margin-top: 15px; font-size: 0.9rem; color: #4a5568;">Takes 60 seconds • Results delivered instantly • No spam</p>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #CBD5E0; font-weight: 400;">Takes 60 seconds • Results delivered instantly • No spam</p>
                 </div>
             </section>
 
@@ -987,7 +1032,7 @@
                         <p><strong>Email:</strong> versadigitalhq@gmail.com</p>
                         <p><strong>Support Response:</strong> Within 24 hours</p>
                         <p><strong>Location:</strong> UK-based, serving globally</p>
-                        <p style="margin-top: 15px;"><em>Real person behind this business - no chatbots or outsourced support</em></p>
+                        <p><strong>Real person behind this business - no chatbots or outsourced support</strong></p>
                     </div>
                 </div>
             </section>
@@ -1040,42 +1085,42 @@
                 <div class="faq-grid">
                     <div class="faq-item">
                         <h4>How does the quiz work?</h4>
-                        <p>The quiz takes 3-5 minutes and asks about your specific ADHD patterns, challenges, and preferences. Based on your answers, you'll get personalized tool recommendations and a custom email sequence with tips that match your brain type.</p>
+                        <p>The quiz takes just 60 seconds and asks about your specific ADHD patterns, challenges, and work style. Based on your answers, you'll get personalized tool recommendations and practical tips tailored to your unique brain type.</p>
                     </div>
                     
                     <div class="faq-item privacy-highlight">
                         <h4>🔒 What about my privacy and data?</h4>
-                        <p>Your privacy is paramount. We only collect what's necessary for personalization, never sell your data, and you can delete your information anytime. All data is encrypted and stored securely. Quiz responses are used solely to provide your personalized recommendations.</p>
+                        <p>Your privacy is paramount. We only collect your email to send your quiz results and optional updates. We never sell or share your data with third parties. You can unsubscribe anytime, and we'll delete your data upon request. All information is encrypted and stored securely.</p>
                     </div>
                     
                     <div class="faq-item">
                         <h4>Who are these tools for?</h4>
-                        <p>Adults with ADHD who are tired of generic productivity advice that doesn't work for our brains. Whether you're diagnosed or self-identifying, if you struggle with executive function, these tools are for you.</p>
+                        <p>Adults with ADHD (diagnosed or self-identifying) who struggle with focus, organization, and productivity. If traditional planners and apps haven't worked for you, these tools are designed specifically for how ADHD brains actually function.</p>
                     </div>
                     
                     <div class="faq-item">
-                        <h4>How do digital bundles help?</h4>
-                        <p>Digital tools give you instant access and infinite customization. Unlike physical planners, you can modify templates to match your changing needs, use them across devices, and never run out of pages.</p>
+                        <h4>How do digital tools help with ADHD?</h4>
+                        <p>Digital tools work better for ADHD minds because they're flexible, forgiving, and always accessible. You can customize them when your needs change, access them from any device, and never worry about losing or forgetting a physical planner. Plus, they reduce the shame of "wasted" pages.</p>
                     </div>
                     
                     <div class="faq-item">
-                        <h4>What if the tools don't work for me?</h4>
-                        <p>Our tools are designed specifically for ADHD minds based on extensive testing with real users. If you need support getting started, just email us within 24 hours - we're here to help you succeed.</p>
+                        <h4>What makes these different from other productivity tools?</h4>
+                        <p>These aren't generic productivity templates with ADHD slapped on the label. They're built around common ADHD challenges like time blindness, executive dysfunction, and overwhelm. Simple enough to actually use, flexible enough to work with your changing needs.</p>
                     </div>
                     
                     <div class="faq-item">
                         <h4>Do I need Notion experience?</h4>
-                        <p>Nope! Our templates come with simple setup instructions and video walkthroughs. Notion is free and works on all devices - we'll show you everything you need to know.</p>
+                        <p>No experience needed! The templates are pre-built and ready to use. We include simple setup instructions and the free version of Notion works perfectly. If you can use a basic app, you can use these templates.</p>
                     </div>
 
                     <div class="faq-item">
-                        <h4>How quickly will I get my tools after purchase?</h4>
-                        <p>Instantly! All products are digital downloads. After payment, you'll immediately receive download links and access instructions via email. No waiting, no shipping delays.</p>
+                        <h4>How quickly do I get access?</h4>
+                        <p>Immediately after purchase! You'll receive an email with download links and instructions within minutes. Everything is digital - no waiting, no shipping. You can start organizing your life right away.</p>
                     </div>
 
                     <div class="faq-item">
-                        <h4>Can I get support if I'm stuck?</h4>
-                        <p>Absolutely! Email support is included with all paid products. Expect a personal response within 24 hours from someone who understands ADHD challenges. No chatbots or outsourced support.</p>
+                        <h4>What if I need help?</h4>
+                        <p>Real human support is included! Email us at versadigitalhq@gmail.com and get a personal response within 24 hours (usually much faster). We understand ADHD struggles and we're here to help you succeed with the tools.</p>
                     </div>
                 </div>
             </section>
@@ -1156,9 +1201,27 @@
                 
                 e.preventDefault();
                 const target = document.querySelector(href);
+                
                 if (target) {
-                    const navHeight = document.getElementById('navbar').offsetHeight;
-                    const targetPosition = target.offsetTop - navHeight - 20;
+                    let targetPosition;
+                    
+                    // Set exact positions for each section
+                    if (href === '#quiz') {
+                        targetPosition = 800;
+                    } else if (href === '#tools') {
+                        targetPosition = 2204;
+                    } else if (href === '#pricing') {
+                        targetPosition = 3364;
+                    } else if (href === '#about') {
+                        targetPosition = 4460;
+                    } else if (href === '#faq') {
+                        targetPosition = 6366;
+                    } else {
+                        // For any other sections, use standard calculation
+                        const navHeight = document.getElementById('navbar').offsetHeight;
+                        targetPosition = target.offsetTop - navHeight - 80;
+                    }
+                    
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
