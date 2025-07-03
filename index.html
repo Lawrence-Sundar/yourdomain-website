@@ -278,51 +278,16 @@
 
         /* Quiz Preview Section */
         .quiz-preview {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 60px 40px;
-            border-radius: 20px;
+            background: transparent;
+            color: #2d3748;
+            padding: 60px 0;
+            border-radius: 0;
             margin: 40px 0;
         }
 
-        .quiz-preview h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            text-align: center;
-            color: white;
-        }
-
-        .quiz-preview p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .quiz-sample {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 30px 0;
-            backdrop-filter: blur(10px);
-        }
-
-        .quiz-sample h4 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .sample-question {
-            background: rgba(255, 255, 255, 0.9);
-            color: #2d3748;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .quiz-cta-center {
-            text-align: center;
+        .quiz-preview iframe {
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         /* Pain Points Grid */
@@ -862,9 +827,6 @@
                         <span>📧</span> No Spam Promise
                     </div>
                     <div class="trust-item">
-                        <span>💝</span> 30-Day Guarantee
-                    </div>
-                    <div class="trust-item">
                         <span>⚡</span> Instant Access
                     </div>
                 </div>
@@ -875,48 +837,37 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="container">
-            <!-- Enhanced Quiz Preview Section -->
+            <!-- Tally Quiz Integration -->
             <section id="quiz" class="quiz-preview">
-                <h3>🧠 Discover Your ADHD Focus Style</h3>
-                <p>Take our 3-minute quiz and get a personalized toolkit delivered straight to your inbox</p>
-                
-                <div class="quiz-sample">
-                    <h4>Quick Preview - Sample Questions:</h4>
-                    <div class="sample-question">
-                        <strong>Q:</strong> When starting a big project, I usually...
-                        <br><em>A) Get overwhelmed and procrastinate • B) Dive in without planning • C) Break it into tiny steps • D) Need someone else to help me start</em>
-                    </div>
-                    <div class="sample-question">
-                        <strong>Q:</strong> My biggest challenge with time is...
-                        <br><em>A) Underestimating how long things take • B) Getting hyperfocused and losing track • C) Starting too many things at once • D) Feeling like I never have enough time</em>
-                    </div>
-                </div>
-                
-                <div class="quiz-cta-center">
-                    <a href="#" class="cta-button cta-secondary">Start Your Free Quiz →</a>
-                    <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.9;">No email required to start • Results delivered instantly</p>
+                <div style="text-align: center; padding: 40px 0;">
+                    <h3 style="color: #2d3748; font-size: 2rem; margin-bottom: 20px;">🧠 Take Your ADHD Focus Style Quiz</h3>
+                    <p style="color: #4a5568; font-size: 1.1rem; margin-bottom: 30px;">Discover your personalized toolkit in just 60 seconds</p>
+                    <a href="https://tally.so/r/mKNAP7" target="_blank" class="cta-button cta-primary" style="display: inline-block; padding: 20px 40px; background: #f56500; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.2rem; box-shadow: 0 10px 30px rgba(245, 101, 0, 0.3); transition: all 0.3s ease;">
+                        Start Your Free Quiz →
+                    </a>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #4a5568;">Takes 60 seconds • Results delivered instantly • No spam</p>
                 </div>
             </section>
 
             <!-- Pain Points -->
             <section class="section">
-                <h2>Does This Sound Familiar?</h2>
+                <h2>Which ADHD Type Are You?</h2>
                 <div class="pain-points">
                     <div class="pain-point">
-                        <h4>🚫 Can't Start Tasks</h4>
-                        <p>You know what you need to do, but your brain just... won't. The paralysis is real, and generic productivity advice doesn't help.</p>
+                        <h4>🌊 The Overwhelmer</h4>
+                        <p>You get paralyzed by too many options and choices. Big projects feel impossible to start because your brain sees the entire scope at once.</p>
                     </div>
                     <div class="pain-point">
-                        <h4>🔥 Burnout Cycles</h4>
-                        <p>You go full throttle until you crash, then feel guilty about the crash. The cycle repeats, and you're exhausted.</p>
+                        <h4>⏰ The Procrastinator</h4>
+                        <p>You work best under pressure but hate the panic. You put things off until the last minute, then rush through in a stress-fueled sprint.</p>
                     </div>
                     <div class="pain-point">
-                        <h4>🤯 Task Overload</h4>
-                        <p>Your to-do list is overwhelming. Everything feels urgent. You don't know where to start, so you avoid it all.</p>
+                        <h4>🧠 The Frozen Thinker</h4>
+                        <p>You overthink every decision and get stuck in analysis paralysis. Your mind runs in circles, making it impossible to move forward.</p>
                     </div>
                     <div class="pain-point">
-                        <h4>⏰ Chaotic Time</h4>
-                        <p>Time feels slippery. You underestimate how long things take, procrastinate, then panic-rush at deadlines.</p>
+                        <h4>🔥 The Burned-Out Achiever</h4>
+                        <p>You go full throttle until you crash, then feel guilty about the crash. The cycle repeats, leaving you exhausted and frustrated.</p>
                     </div>
                 </div>
             </section>
@@ -976,13 +927,14 @@
                             <li>Basic Planning Template</li>
                             <li>Community Access</li>
                         </ul>
-                        <a href="#quiz" class="cta-button cta-primary">Start Free Quiz</a>
+                        <a href="https://versadigital.gumroad.com/l/launchpad" target="_blank" class="cta-button cta-primary">Get Free Starter Kit</a>
                     </div>
                     
                     <div class="pricing-card featured">
                         <h3>ADHD Focus Toolkit</h3>
                         <div class="price">£9<span>/one-time</span></div>
                         <ul class="pricing-features">
+                            <li>Everything in Free Starter Kit</li>
                             <li>Complete Notion Template Bundle</li>
                             <li>Time-Blocking System</li>
                             <li>Task Prioritization Framework</li>
@@ -991,22 +943,7 @@
                             <li>Email Support</li>
                             <li>Future Updates Included</li>
                         </ul>
-                        <a href="#" class="cta-button cta-primary">Get Toolkit - £9</a>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <h3>Premium Bundle</h3>
-                        <div class="price">£29<span>/one-time</span></div>
-                        <ul class="pricing-features">
-                            <li>Everything in Focus Toolkit</li>
-                            <li>Advanced Notion Dashboard</li>
-                            <li>Habit Tracking System</li>
-                            <li>Goal Setting Framework</li>
-                            <li>Burnout Prevention Tools</li>
-                            <li>Monthly Action Systems</li>
-                            <li>Priority Email Support</li>
-                        </ul>
-                        <a href="#" class="cta-button cta-primary">Get Premium - £29</a>
+                        <a href="https://versadigital.gumroad.com/l/launchpad-plus" target="_blank" class="cta-button cta-primary">Get Toolkit - £9</a>
                     </div>
                 </div>
 
@@ -1021,9 +958,6 @@
                     <div class="security-badge">
                         <span>🛡️</span> Privacy Protected
                     </div>
-                    <div class="security-badge">
-                        <span>✅</span> 30-Day Money Back Guarantee
-                    </div>
                 </div>
             </section>
 
@@ -1037,7 +971,7 @@
                     
                     <div class="contact-info">
                         <h4>📬 Get in Touch</h4>
-                        <p><strong>Email:</strong> hello@versadigital.com</p>
+                        <p><strong>Email:</strong> versadigitalhq@gmail.com</p>
                         <p><strong>Support Response:</strong> Within 24 hours</p>
                         <p><strong>Location:</strong> UK-based, serving globally</p>
                         <p style="margin-top: 15px;"><em>Real person behind this business - no chatbots or outsourced support</em></p>
@@ -1113,7 +1047,7 @@
                     
                     <div class="faq-item">
                         <h4>What if the tools don't work for me?</h4>
-                        <p>Every paid product comes with a 30-day satisfaction guarantee. If the tools don't help, just email us for a full refund. But based on our beta testing, we're confident you'll find something that clicks.</p>
+                        <p>Our tools are designed specifically for ADHD minds based on extensive testing with real users. If you need support getting started, just email us within 24 hours - we're here to help you succeed.</p>
                     </div>
                     
                     <div class="faq-item">
@@ -1137,10 +1071,13 @@
             <section class="email-signup">
                 <h3>Stay Updated on New ADHD Tools</h3>
                 <p>Get notified when we release new templates, systems, and resources. Plus occasional tips that actually work for ADHD minds.</p>
-                <form class="email-form">
-                    <input type="email" class="email-input" placeholder="Enter your email address" required>
-                    <button type="submit" class="email-submit">Join Updates</button>
-                </form>
+                
+                <!-- ConvertKit Form Integration -->
+                <div style="margin: 30px auto; max-width: 500px;">
+                    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+                    <form action="https://app.kit.com/forms/8177172/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8177172" data-uid="d42b52583c" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;redirect&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;https://versadigital.gumroad.com/l/adhdfocuskit&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800" style="background-color: transparent; border-radius: 6px; max-width: 100%;"><div data-style="full"><div data-element="column" class="formkit-column" style="background: transparent;"><div class="formkit-header" data-element="header" style="color: white; font-size: 24px; font-weight: 700; display: none;"><h2>Get ADHD Tips & Tools</h2></div><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Enter your email address" required="" type="email" style="color: #2d3748; border-color: rgba(255,255,255,0.3); font-weight: 400; background: rgba(255,255,255,0.1); border-radius: 50px; padding: 15px 20px;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: white; background-color: #f56500; border-radius: 50px; font-weight: 700; padding: 15px 30px; width: 100%; margin-top: 15px;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Join Updates</span></button></div><div class="formkit-disclaimer" data-element="disclaimer" style="color: rgba(255,255,255,0.8); font-size: 13px; text-align: center; margin-top: 15px;">We respect your privacy. Unsubscribe at anytime.</div><div class="formkit-powered-by-convertkit-container" style="display: none;"><a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a></div></div></div><style>.formkit-form[data-uid="d42b52583c"] *{box-sizing:border-box;}.formkit-form[data-uid="d42b52583c"]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}</style></form>
+                </div>
+                
                 <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">No spam, ever. Unsubscribe anytime. We respect your inbox.</p>
             </section>
         </div>
@@ -1153,7 +1090,7 @@
                 <div class="footer-social">
                     <a href="#" title="TikTok">📱 TikTok</a>
                     <a href="#" title="YouTube">📺 YouTube</a>
-                    <a href="mailto:hello@versadigital.com" title="Email">📧 Contact</a>
+                    <a href="mailto:versadigitalhq@gmail.com" title="Email">📧 Contact</a>
                 </div>
                 <p>&copy; 2025 VersaDigital. All rights reserved. | <a href="#" style="color: #fff;">Privacy Policy</a> | <a href="#" style="color: #fff;">Terms of Service</a> | <a href="#" style="color: #fff;">Refund Policy</a></p>
                 <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Built with ❤️ for the ADHD community • Registered in England & Wales</p>
@@ -1204,19 +1141,21 @@
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
-                    });
+    });
                 }
             });
         });
 
-        // Email Form Handling
-        document.querySelector('.email-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.querySelector('.email-input').value;
-            // In a real implementation, you'd send this to your email service
-            alert('Thanks for signing up! You\'ll hear from us soon with ADHD-friendly tips.');
-            this.reset();
-        });
+        // Email Form Handling (ConvertKit handles this now, but keeping for safety)
+        const emailForm = document.querySelector('.email-form');
+        if (emailForm) {
+            emailForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.querySelector('.email-input').value;
+                alert('Thanks for signing up! You\'ll hear from us soon with ADHD-friendly tips.');
+                this.reset();
+            });
+        }
 
         // Enhanced Mobile Experience
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
