@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" type="image/png" href="https://drive.google.com/uc?export=download&id=1gKkQsHkt5tBw0gd2ziJHdmlzkECb_-Lq">
+    <title>ADHD Tax Calculator: You're Losing $31/Day - Discover Your Exact Loss</title>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
+            color: #E2E8F0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .quiz-header {
+            margin-bottom: 40px;
+        }
+
+        .quiz-header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #F7FAFC;
+            line-height: 1.2;
+        }
+
+        .quiz-header p {
+            font-size: 1.2rem;
+            color: #CBD5E0;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .urgency-text {
+            background: rgba(245, 101, 0, 0.1);
+            border-left: 4px solid #f56500;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .urgency-text p {
+            color: #F7FAFC;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .quiz-embed {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 600px;
+        }
+
+        .quiz-embed iframe {
+            width: 100%;
+            min-height: 600px;
+            border: 0;
+            border-radius: 15px;
+        }
+
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 20px 15px;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .quiz-embed {
+                padding: 15px;
+                min-height: 500px;
+            }
+            
+            .quiz-embed iframe {
+                min-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>🚨 Your ADHD Costs You $31 Every Single Day</h1>
+            <p>This isn't normal spending—it's ADHD tax. Discover your exact daily loss rate in 60 seconds.</p>
+            
+            <div class="urgency-text">
+                <p><strong>⏰ Financial bleeding detected:</strong> Since you opened this page, you've lost $<span id="lost-amount">0.00</span> to ADHD symptoms. This stops when you know your number.</p>
+            </div>
+        </div>
+
+        <div class="quiz-embed">
+            <iframe data-tally-src="https://tally.so/r/mKNAP7?transparentBackground=1" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="The ADHD Tax Calculator"></iframe>
+        </div>
+
+        <div class="trust-indicators">
+            <div class="trust-item">
+                <span>🔒</span> SSL Secured
+            </div>
+            <div class="trust-item">
+                <span>⏱️</span> Takes 60 Seconds
+            </div>
+            <div class="trust-item">
+                <span>📧</span> Results Sent Instantly
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Real-time money loss calculator
+        const startTime = new Date();
+        const dailyLoss = 31; // $31/day
+        const lossPerSecond = dailyLoss / 86400;
+        
+        function updateLossCounter() {
+            const now = new Date();
+            const secondsElapsed = (now - startTime) / 1000;
+            const lostAmount = secondsElapsed * lossPerSecond;
+            document.getElementById('lost-amount').textContent = lostAmount.toFixed(2);
+        }
+        
+        setInterval(updateLossCounter, 100);
+        updateLossCounter();
+    </script>
+</body>
+</html>
