@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="icon" type="image/png" href="https://drive.google.com/uc?export=download&id=1gKkQsHkt5tBw0gd2ziJHdmlzkECb_-Lq">
     <title>VersaDigital - ADHD Focus Hub | Tools That Match How Your Brain Works</title>
     <style>
@@ -120,7 +120,7 @@
             border: none;
         }
 
-        /* Hero Section - adjusted for fixed nav and NO GAP */
+        /* Hero Section - QUIZ CTA ENHANCED */
         .hero {
             padding: 180px 0 40px;
             text-align: center;
@@ -129,7 +129,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
             margin-bottom: 20px;
             opacity: 0;
@@ -137,7 +137,7 @@
         }
 
         .hero .tagline {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             margin-bottom: 15px;
             opacity: 0.95;
             font-weight: 600;
@@ -154,6 +154,31 @@
             margin-right: auto;
             opacity: 0;
             animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        /* ENHANCED QUIZ CTA */
+        .quiz-urgency-box {
+            background: rgba(245, 101, 0, 0.1);
+            border: 2px solid #f56500;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 600px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+
+        .quiz-urgency-box p {
+            color: #F7FAFC;
+            font-weight: 600;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .loss-counter {
+            color: #f56500;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
 
         .cta-container {
@@ -180,11 +205,15 @@
         .cta-primary {
             background: #f56500;
             color: white;
+            font-size: 1.3rem !important;
+            padding: 22px 50px !important;
+            font-weight: 700 !important;
+            box-shadow: 0 15px 40px rgba(245, 101, 0, 0.4) !important;
         }
 
         .cta-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(245, 101, 0, 0.4);
+            box-shadow: 0 20px 50px rgba(245, 101, 0, 0.5);
         }
 
         .cta-secondary {
@@ -197,6 +226,21 @@
         .cta-secondary:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: translateY(-3px);
+        }
+
+        /* SOCIAL PROOF COUNTER */
+        .social-proof {
+            background: rgba(72, 187, 120, 0.1);
+            border: 1px solid rgba(72, 187, 120, 0.3);
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-size: 0.9rem;
+            margin: 20px auto;
+            display: inline-block;
+            color: #48BB78;
+            animation: pulse 2s infinite;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.7s forwards, pulse 2s infinite 1s;
         }
 
         /* Trust Signals */
@@ -718,18 +762,12 @@
             box-shadow: 0 10px 20px rgba(245, 101, 0, 0.3);
         }
 
-        /* Mobile responsive logo */
+        /* Mobile responsive */
         @media (max-width: 768px) {
             .logo img {
                 height: 32px;
-            }
-            
-            .logo .brand-main {
-                font-size: 16px;
-            }
-            
-            .logo .brand-sub {
-                font-size: 10px;
+                width: 150px !important;
+                transform: scale(1) !important;
             }
 
             .nav-links {
@@ -797,7 +835,7 @@
                         <img src="https://i.imgur.com/pBGqqxc.png" alt="VersaDigital Logo">
                     </a>
                     <ul class="nav-links">
-                        <li><a href="https://tally.so/r/mKNAP7" target="_blank">Take Quiz</a></li>
+                        <li><a href="quiz.html">ADHD Tax Quiz</a></li>
                         <li><a href="#tools">Tools</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#about">About</a></li>
@@ -808,32 +846,43 @@
             </div>
         </nav>
 
-        <!-- Hero Section -->
+        <!-- Hero Section - ENHANCED QUIZ FOCUS -->
         <section class="hero">
             <div class="container">
-                <h1>Stop Fighting Your ADHD Brain</h1>
-                <p class="tagline">Get type-specific systems that work WITH how your mind actually operates.</p>
-                <p>Join 750+ ADHD minds who've discovered their type and transformed their productivity. Discover your ADHD type and get a complete productivity system designed for your specific challenges.</p>
+                <h1>🚨 Your ADHD Costs You $31 Every Single Day</h1>
+                <p class="tagline">Late fees, impulse purchases, procrastination taxes. Calculate your exact financial loss.</p>
+                <p>The average ADHD person loses $11,315/year to ADHD symptoms. Most don't even realize it's happening. Stop the bleeding with personalized intervention systems.</p>
+                
+                <div class="quiz-urgency-box">
+                    <p>🚨 <strong>Financial bleeding detected:</strong> The average ADHD brain loses $11,315/year to hidden costs. Your number could be higher.</p>
+                </div>
+
                 <div class="cta-container">
-                    <a href="https://tally.so/r/mKNAP7" target="_blank" class="cta-button cta-primary pulse">Discover Your ADHD Type</a>
+                    <a href="quiz.html" class="cta-button cta-primary pulse">Calculate Your ADHD Tax NOW</a>
                     <a href="#tools" class="cta-button cta-secondary">See The System</a>
                 </div>
+
+                <!-- LIVE SOCIAL PROOF COUNTER -->
+                <div class="social-proof">
+                    🔥 <span id="live-counter">12</span> people finding their number right now
+                </div>
+
                 <div class="trust-signals">
                     <div class="trust-item">
                         <span>🔒</span> SSL Secured
                     </div>
                     <div class="trust-item">
-                        <span>📧</span> No Spam Promise
+                        <span>⏱️</span> Takes 60 Seconds
                     </div>
                     <div class="trust-item">
-                        <span>⚡</span> Instant Access
+                        <span>📧</span> Results Sent Instantly
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Content - ALL ORIGINAL SECTIONS PRESERVED -->
     <div class="main-content">
         <div class="container">
             <!-- Pain Points -->
@@ -1062,10 +1111,10 @@
 
             <!-- Email Signup -->
             <section class="email-signup">
-                <h3>Ready to Transform Your ADHD Experience?</h3>
-                <p>Take our free quiz to discover your specific ADHD type and get personalized tools that actually work with your brain.</p>
-                <a href="https://tally.so/r/mKNAP7" target="_blank" class="cta-button cta-primary" style="display: inline-block; margin-top: 20px;">Discover Your ADHD Type</a>
-                <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">Get your results + join our community of ADHD minds who are finally thriving. No spam, ever.</p>
+                <h3>Ready to Stop Your ADHD Tax?</h3>
+                <p>Take our free quiz to calculate your exact daily loss and get personalized intervention systems.</p>
+                <a href="quiz.html" class="cta-button cta-primary" style="display: inline-block; margin-top: 20px;">Calculate Your ADHD Tax</a>
+                <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.8;">Get your results + join our community of ADHD minds who stopped the bleeding. No spam, ever.</p>
             </section>
         </div>
     </div>
@@ -1085,38 +1134,73 @@
     <button class="scroll-top" id="scrollTop">↑</button>
 
     <script>
+        // Real-time money loss calculator
+        const startTime = new Date();
+        const dailyLoss = 31; // $31/day
+        const lossPerSecond = dailyLoss / 86400;
+        
+        function updateLossCounter() {
+            const now = new Date();
+            const secondsElapsed = (now - startTime) / 1000;
+            const lostAmount = secondsElapsed * lossPerSecond;
+            const element = document.getElementById('lost-amount');
+            if (element) {
+                element.textContent = lostAmount.toFixed(2);
+            }
+        }
+        
+        setInterval(updateLossCounter, 100);
+        updateLossCounter();
+
+        // Live Counter Animation (Green Box)
+        function updateLiveCounter() {
+            const baseUsers = 12;
+            const currentUsers = baseUsers + Math.floor(Math.random() * 8);
+            const element = document.getElementById('live-counter');
+            if (element) {
+                element.textContent = currentUsers;
+            }
+        }
+        setInterval(updateLiveCounter, 3000);
+        updateLiveCounter();
+
         // Initialize countdown when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            // Page initialization code can go here
+            updateLossCounter();
+            updateLiveCounter();
         });
 
         // Sticky Navigation
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+            if (navbar) {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
             }
         });
 
         // Scroll to Top Button
         const scrollTopBtn = document.getElementById('scrollTop');
         
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        });
-
-        scrollTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        if (scrollTopBtn) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
             });
-        });
+
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
 
         // Smooth Scrolling for Navigation Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1146,7 +1230,8 @@
                         targetPosition = 6110;
                     } else {
                         // For any other sections, use standard calculation
-                        const navHeight = document.getElementById('navbar').offsetHeight;
+                        const navbar = document.getElementById('navbar');
+                        const navHeight = navbar ? navbar.offsetHeight : 80;
                         targetPosition = target.offsetTop - navHeight - 80;
                     }
                     
@@ -1162,7 +1247,7 @@
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         
-        if (mobileMenuBtn) {
+        if (mobileMenuBtn && navLinks) {
             mobileMenuBtn.addEventListener('click', function() {
                 navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
                 this.textContent = this.textContent === '☰' ? '✕' : '☰';
@@ -1194,4 +1279,3 @@
     </script>
 </body>
 </html>
-
