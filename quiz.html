@@ -142,12 +142,8 @@
     </div>
 
     <div class="quiz-container">
-        <!-- MINIMAL TOP SECTION -->
-        <div class="quiz-top">
-            <div class="live-counter">
-                🔥 <span id="live-counter">5</span> people finding their number right now
-            </div>
-        </div>
+        <!-- MINIMAL TOP SECTION (live counter removed) -->
+        <div class="quiz-top"></div>
 
         <!-- FULL-SCREEN QUIZ -->
         <div class="quiz-embed">
@@ -169,22 +165,9 @@
     </div>
 
     <script>
-        // ===== LIVE USER COUNTER (PSYCHOLOGICAL SOCIAL PROOF) =====
-        function updateLiveCounter() {
-            const baseUsers = 5;
-            const currentUsers = baseUsers + Math.floor(Math.random() * 8);
-            document.getElementById('live-counter').textContent = currentUsers;
-        }
-        setInterval(updateLiveCounter, 3000);
-        updateLiveCounter();
-
         // ===== EXIT INTENT DETECTION =====
-        let mouseY = 0;
         let exitPopupShown = false;
-        
         document.addEventListener('mousemove', function(e) {
-            mouseY = e.clientY;
-            // If mouse moves towards the top of the screen and popup hasn't been shown
             if (e.clientY < 50 && !exitPopupShown) {
                 document.getElementById('exit-popup').style.display = 'flex';
                 exitPopupShown = true;
